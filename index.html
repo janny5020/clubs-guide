@@ -228,6 +228,26 @@ a{color:var(--blue)}
   white-space:nowrap;transition:background .15s;
 }
 .ask-btn:hover{background:var(--green-d);text-decoration:none;color:#fff}
+
+/* ── WHO TO CONTACT ──────────────────────────── */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.5rem}
+@media(max-width:560px){.who-grid{grid-template-columns:1fr}}
+.who-card{border:1.5px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.who-header{display:flex;align-items:center;gap:.85rem;padding:1rem 1.1rem .85rem;border-bottom:1px solid var(--border)}
+.who-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.who-card.cbe .who-dot{background:var(--blue)}
+.who-card.wx  .who-dot{background:var(--orange)}
+.who-team{font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:var(--text)}
+.who-card.cbe .who-team{color:var(--blue)}
+.who-card.wx  .who-team{color:var(--orange)}
+.who-full{font-size:.75rem;color:var(--muted);margin-top:1px}
+.who-list{list-style:none;padding:.75rem 1.1rem;flex:1}
+.who-list li{font-size:.84rem;color:#444;padding:5px 0;border-bottom:1px solid #f5f5f5;padding-left:1rem;position:relative;line-height:1.45}
+.who-list li:last-child{border-bottom:none}
+.who-list li::before{content:'–';position:absolute;left:0;color:#bbb}
+.who-btn{display:block;margin:.25rem 1rem 1rem;background:var(--blue);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:.6rem 1rem;border-radius:8px;text-decoration:none;text-align:center;transition:background .15s}
+.who-btn:hover{background:var(--blue-d);color:#fff;text-decoration:none}
+.who-tip{margin:.25rem 1rem 1rem;background:#fff8ec;border:1.5px solid #ffe0a0;border-radius:8px;padding:.65rem .85rem;font-size:.8rem;color:#7a5500;line-height:1.5}
 </style>
 </head>
 <body>
@@ -242,7 +262,7 @@ a{color:var(--blue)}
     <li><a href="#attendance">Attendance</a></li>
     <li><a href="#start">Start a club</a></li>
     <li><a href="#expenses">Expenses</a></li>
-    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#who-to-contact">Who to contact</a></li><li><a href="#faq">FAQ</a></li>
   </ul>
 </nav>
 
@@ -407,6 +427,51 @@ a{color:var(--blue)}
       <div class="nstep"><div class="nstep-head"><div class="nstep-num">5</div><span>Attach receipt</span></div><div class="nstep-body">Upload your receipt and submit.</div></div>
     </div>
     <p class="link-row"><a href="https://duolingo.atlassian.net/wiki/spaces/DUO/pages/2551316534">See the full Navan Expense System guide →</a></p>
+  </section>
+
+
+  <!-- CBE VS WX -->
+  <section id="who-to-contact">
+    <h2>Who to contact</h2>
+    <p style="font-size:.875rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6;">Not sure who to reach out to for help with your club? Here's a quick breakdown of when to go to <strong>CBE</strong> (Community &amp; belonging Experience) vs <strong>WX</strong> (Workplace).</p>
+    <div class="who-grid">
+
+      <div class="who-card cbe">
+        <div class="who-header">
+          <div class="who-dot"></div>
+          <div>
+            <div class="who-team">CBE</div>
+            <div class="who-full">Community &amp; Belonging Experience</div>
+          </div>
+        </div>
+        <ul class="who-list">
+          <li>Starting or registering a new club</li>
+          <li>Questions about the $100/month budget</li>
+          <li>Reimbursement &amp; Navan expense help</li>
+          <li>Club guidelines &amp; policy questions</li>
+          <li>Finding or joining existing clubs</li>
+          <li>General club culture &amp; programming ideas</li>
+        </ul>
+      </div>
+
+      <div class="who-card wx">
+        <div class="who-header">
+          <div class="who-dot"></div>
+          <div>
+            <div class="who-team">WX</div>
+            <div class="who-full">Workplace</div>
+          </div>
+        </div>
+        <ul class="who-list">
+          <li>Storage for club equipment at the office</li>
+          <li>Booking or using office space for events</li>
+          <li>Larger physical setups or installations</li>
+          <li>Office logistics &amp; venue coordination</li>
+        </ul>
+        <div class="who-tip">💡 Loop in WX <em>early</em> — especially for storage or larger setups, so they can figure out what's possible before you commit.</div>
+      </div>
+
+    </div>
   </section>
 
   <!-- FAQ -->
